@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active: git
+  devtools:
+    restart:
+      poll-interval: 2s
+      enabled: true
+  config:
+    import: "configserver:"
+  application:
+    name: auth-user-service
+  cloud:
+    config:
+      uri: http://localhost:8888
+      fail-fast: true
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+
+
+
+
