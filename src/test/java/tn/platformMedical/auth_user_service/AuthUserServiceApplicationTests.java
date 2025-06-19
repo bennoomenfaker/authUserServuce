@@ -10,4 +10,5 @@ class AuthUserServiceApplicationTests {
 	void contextLoads() {
 	}
 
+
 }
